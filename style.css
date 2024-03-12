@@ -199,8 +199,40 @@ header img {
 main {
     background-color: #F1E8BE;
     grid-area: main;
+    display: grid;
+    grid-template: 1fr 1fr / 3fr 1fr;
+    grid-template-areas:
+        "projects announcements"
+        "projects trending";
 }
 
+#projects {
+    grid-area: projects;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 350px);
+    gap: 15px;
+    justify-items: center;
+    padding: 15px;
+}
+
+#projects div {
+    /* margin-left: 10px; */
+}
+
+.project {
+    background-color: #fff;
+    width: 250px;
+    height: 300px;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+#projects_heading {
+    grid-column: 1 / -1;
+    justify-self: stretch;
+}
+
+/* Footer */
 footer {
     grid-area: footer;
     background-color: #838CA2;
