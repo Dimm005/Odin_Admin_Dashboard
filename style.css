@@ -21,6 +21,7 @@ a {
     gap: 5px;
 }
 
+/* Nav */
 nav, header, main, footer {
     border-radius: 20px;
 }
@@ -79,13 +80,15 @@ nav img {
     height: 50px;
 }
 
+/* Header */
+
 header {
-    /* background-color: #BED6A9; */
-    /* height: 150px; */
+    background-color: #BED6A9;
+    /* border: #4F7232 solid 2px; */
     grid-area: header;
     color: #2B3856;
     display: grid;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 80px 1fr;
 }
 
 header img {
@@ -95,45 +98,104 @@ header img {
 
 .upper-part {
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 1.5fr 1fr;
     align-items: center;
+    align-content: center;
 }
 
 .search {
     padding: 0 10px;
     display: grid;
     grid-template-columns: 50px 1fr;
-    align-content: center;
+    /* align-content: center; */
     justify-items: start;
 }
 
 .search input {
     border-radius: 10px;
-    border: 3px #2B3856 solid;
-    size: 300em;
+    border: 2px #2B3856 solid;
+    width: 400px;
 }
 
 #personal {
     padding: 10px 10px;
     display: grid;
-    grid-template-columns: minmax(50px, 2fr) minmax(100px, 1fr) minmax(10em, 4fr);
+    grid-template-columns: 100px 100px 1fr;
     justify-items: center;
     align-items: center;
 }
 
 .avatar {
-    width: 70px;
-    height: 70px;
-    border: 3px #2B3856 solid;
+    width: 50px;
+    height: 50px;
+    /* border: 3px #2B3856 solid; */
     border-radius: 50%;
 }
 
 #user-name {
-    font-size: 1.5em;
+    font-size: 1.2em;
     font-weight: 600;
-    text-align: right;
+    text-align: left;
 }
 
+.lower-part {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    justify-content: center;
+}
+
+.greeting {
+    display: grid;
+    grid-template: 1fr / 120px 1fr;
+    /* justify-items: center; */
+    align-items: center;
+    /* justify-content: center; */
+}
+
+#avatar_big {
+    width: 120px;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    /* align-self: center;
+    justify-self: center; */
+}
+
+.greeting img {
+    width: 80px;
+    height: 80px;
+}
+
+.greeting p {
+    margin: 0;
+}
+
+#hi {
+    font-weight: 800;
+}
+
+#name {
+    font-size: 1.5em;
+    font-weight: 600;
+}
+
+.actions {
+    display: grid;
+    grid-template: 1fr / repeat(3, 1fr);
+    align-items: center;
+    justify-items: center;
+}
+
+.action {
+    width: 100px;
+    height: 30px;
+    border: 2px solid #2B3856;
+    border-radius: 5px;
+    color: #2B3856;
+    font-weight: 800;
+}
+
+/* Main */
 main {
     background-color: #F1E8BE;
     grid-area: main;
@@ -141,7 +203,7 @@ main {
 
 footer {
     grid-area: footer;
-    background-color: #838CA1;
+    background-color: #838CA2;
     padding: 20px;
     text-align: center;
     color: #BED6A9;
